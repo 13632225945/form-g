@@ -1,0 +1,300 @@
+.f-app {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.f-left {
+  width: 300px;
+  position: relative;
+  background: #252525;
+  display: flex;
+}
+.f-center {
+  width: calc(100% - 600px);
+  overflow: auto;
+  padding: 30px 20px;
+}
+.f-right {
+  width: 300px;
+  background: #252525;
+  display: flex;
+}
+.f-top-tools {
+  width: 50px;
+  height: 100%;
+  background: #333333;
+}
+.f-top-tools .f-tab-bottom {
+  position: absolute;
+  bottom: 0;
+}
+.f-top-tools i {
+  height: 50px;
+  width: 50px;
+  color: #ccc;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  display: block;
+}
+.f-top-tools i.active,
+.f-top-tools i:hover {
+  color: #fff;
+}
+.f-left-content {
+  flex-grow: 1;
+  overflow: auto;
+}
+.f-left-content > div {
+  display: none;
+}
+.f-left-content > div.active {
+  display: block;
+}
+.f-element-list {
+  margin: 10px 0;
+  padding: 0;
+}
+.f-element-list li {
+  padding: 0 20px;
+  list-style: none;
+  color: #cccccc;
+  cursor: default;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+}
+.f-element-list li:hover {
+  background: #2a2d2e;
+}
+.f-element-list li i {
+  width: 20px;
+}
+.f-element-list li i.fa-plus {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+}
+.f-element-list li i.fa-plus:hover {
+  background: #333333;
+  color: #fff;
+}
+.f-code {
+  height: 100%;
+}
+.f-json-update {
+  background: #4288fd;
+  border: 0;
+  outline: none;
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 2px;
+  height: 30px;
+  line-height: 30px;
+}
+.f-json-update:hover {
+  background: #5896ff;
+}
+.f-json-update i {
+  padding-right: 5px;
+}
+.f-json-textarea {
+  background: transparent;
+  resize: none;
+  color: #99d7f8;
+  font-size: 12px;
+  border: 0;
+  outline: none;
+  height: calc(100% - 60px);
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+.f-setting {
+  padding-top: 20px;
+}
+.f-group {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+  position: relative;
+}
+.f-group .fa-trash {
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+}
+.f-group-plus {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.f-group-plus:hover {
+  background: #2a2d2e;
+}
+.f-label-field {
+  padding: 0 20px 5px 20px;
+  color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.f-label-field label {
+  padding-right: 10px;
+}
+.f-select,
+.f-input {
+  background: #3c3c3c;
+  color: #c8c8c8;
+  float: right;
+}
+.f-input {
+  height: 24px;
+  line-height: 24px;
+  border: 0;
+  padding: 0 5px;
+  font-size: 12px;
+  width: 70px;
+}
+.f-switch {
+  position: relative;
+  height: 20px;
+  line-height: 20px;
+  min-width: 30px;
+  padding: 0 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: .1s linear;
+}
+.f-switch.on {
+  background-color: #f4bf75;
+}
+.f-switch i {
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 20px;
+  background-color: #d2d2d2;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+.f-switch.on i {
+  left: 100%;
+  margin-left: -18px;
+  background-color: #fff;
+}
+.f-center .f-displayer {
+  background: #cccccc;
+  height: 20px;
+  opacity: 0.5;
+  border-radius: 5px;
+}
+.f-center .form-item {
+  position: relative;
+}
+.f-center .form-item.active,
+.f-center .form-item:hover {
+  box-shadow: 0 0 5px 0 #c8c8c8;
+}
+.f-center .form-item.f-dragging {
+  position: fixed;
+  z-index: 1;
+}
+.f-center .form-item.f-dragging:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #cccccc;
+  opacity: 0.5;
+  z-index: 2;
+}
+.f-center .form-item-tools {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #c5c5c5;
+}
+.f-center .form-item:hover .form-item-tools {
+  display: block;
+}
+.f-center .form-item-tools i {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.f-center .form-item-tools i:hover {
+  background: #333333;
+  color: #ccc;
+}
+.f-element-setting {
+  padding: 20px 0;
+}
+.f-modal {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.3);
+  display: none;
+}
+.f-modal-content {
+  width: 800px;
+  height: 80%;
+  margin: 20px auto;
+  position: relative;
+  padding: 30px;
+  background: #252525;
+}
+.f-modal-content .fa-copy {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  color: #ccc;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  display: block;
+}
+.f-modal-content .fa-copy:hover {
+  background: #333333;
+  color: #ccc;
+}
+.f-modal-content textarea {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  resize: none;
+  color: #99d7f8;
+  font-size: 12px;
+  border: 0;
+  outline: none;
+}

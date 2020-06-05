@@ -1,0 +1,22 @@
+{
+  "name": "form-g",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^1.12.4",
+    "jquery-validation": "^1.19.2",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1"
+  }
+}

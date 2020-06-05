@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表单生成器</title>
+  <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="stylesheet" href="./third/layui/css/layui.css">
+</head>
+<body>
+  <div class="f-app">
+    <div class="f-left">
+      <div class="f-top-tools">
+        <div class="f-tab-title"><i class="fa fa-bars active" title="元素列表"></i></div>
+        <div class="f-tab-title"><i class="fa fa-cog" title="表单设置"></i></div>
+        <div class="f-tab-title"><i class="fa fa-code" title="JSON数据"></i></div>
+        <div class="f-tab-bottom">
+          <i class="fa fa-eye" title="查看html" onclick="viewHtml()"></i>
+        </div>
+      </div>
+      <div class="f-left-content">
+        <div class="active">
+          <ul class="f-element-list">
+            <li><i style="color:#0667a1;" class="fa fa-edit"></i>输入框<i class="fa fa-plus" onclick="addText()"></i></li>
+            <li><i style="color:#1e9cef;" class="fa fa-key"></i>密码框<i class="fa fa-plus" onclick="addPassword()"></i></li>
+            <li><i style="color:#f4bf75;" class="fa fa-wpforms"></i>文本框<i class="fa fa-plus" onclick="addTextarea()"></i></li>
+            <li><i style="color:#e53935;" class="fa fa-check-square"></i>多选框<i class="fa fa-plus" onclick="addCheckbox()"></i></li>
+            <li><i style="color:#207ebd;" class="fa fa-dot-circle-o"></i>单选框<i class="fa fa-plus" onclick="addRadio()"></i></li>
+            <li><i style="color:#0667a1;" class="fa fa-caret-square-o-down"></i>选择框<i class="fa fa-plus" onclick="addSelect()"></i></li>
+            <li><i style="color:#e53935;" class="fa fa-calendar"></i>日期框<i class="fa fa-plus" onclick="addDate()"></i></li>
+          </ul>
+        </div>
+        <div class="f-setting">
+          <div class="f-label-field">
+            <label>UI库</label>
+            <select class="f-select" id="f-ui-plugin">
+              <option value="layui" selected>Layui</option>
+            </select>
+          </div>
+          <div class="f-label-field">
+            <label>表单验证插件</label>
+            <select class="f-select" id="f-validate-plugin">
+              <option value="validation">Validation</option>
+            </select>
+          </div>
+        </div>
+        <div class="f-code">
+          <button class="f-json-update" onclick="updateJson()"><i class="fa fa-refresh"></i>更新</button>
+          <textarea class="f-json-textarea"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="f-center">
+      <form></form>
+    </div>
+    <div class="f-right">
+      <div class="f-top-tools">
+        <div><i class="fa fa-cog active" title="元素设置"></i></div>
+      </div>
+      <div class="f-left-content">
+        <div class="active f-element-setting">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="f-modal">
+    <div class="f-modal-content">
+      <i class="fa fa-copy" onclick="copyHtml()"></i>
+      <textarea></textarea>
+    </div>
+  </div>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="../node_modules/jquery-validation/dist/localization/messages_zh.min.js"></script>
+  <script src="./index.js"></script>
+
+  <script src="../src/third/layui/layui.all.js"></script>
+</body>
+</html>
